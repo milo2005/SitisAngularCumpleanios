@@ -23,6 +23,22 @@ html, body{
     margin: 16px;
 }
 
+.fab{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    border-radius: 50%;
+    background: blueviolet;
+    color: white;
+
+}
 
 
 @media  only screen and (min-width: 600px){

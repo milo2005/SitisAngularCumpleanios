@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Photo, BirthdayService } from '../../services/birthday.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -10,7 +11,10 @@ export class MainPageComponent implements OnInit {
 
   data: Photo[] = [];
 
-  constructor(public service: BirthdayService) {
+  constructor(public service: BirthdayService,
+    public router: Router,
+    public route: ActivatedRoute) {
+
     this.data = service.loadPhotos();
   }
 
@@ -19,5 +23,9 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit() { }
+
+  goToAdd() {
+    this.router.navigate(['add'], { relativeTo: this.route });
+  }
 
 }
