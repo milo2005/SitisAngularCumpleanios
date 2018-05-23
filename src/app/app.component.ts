@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BirthdayService, Photo } from './services/birthday.service';
 
 @Component({
   selector: 'app-root', // El elemento html para usar el componente
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   providers: [] // Especifica los servicios que tiene componente y sus hijos
 })
 export class AppComponent {
-  title = 'app';
+
+  data: Photo[] = [];
+
+  constructor(public service: BirthdayService) {
+    this.data = service.loadPhotos();
+  }
+
 }

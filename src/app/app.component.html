@@ -3,5 +3,8 @@
 <div class="container">
   <app-calendar></app-calendar>
   <h4>Fotos !!</h4>
-  <app-card></app-card>
+  <div class="row">
+    <app-card class="col" *ngFor="let c of data" [photo]="c"></app-card>    
+  </div>
+  
 </div>

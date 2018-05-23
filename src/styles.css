@@ -9,6 +9,22 @@ html, body{
     margin-right: 10px;
 }
 
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*justify-content: center;
+    align-items: flex-end;*/
+}
+
+.col{
+    flex: 1;
+    min-width: 320px;
+    margin: 16px;
+}
+
+
+
 @media  only screen and (min-width: 600px){
 
     .container{
