@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { BirthdayService } from './services/birthday.service';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [ // Componentes, Pipes, Directivas que tienen visibilidad en modulo
-    AppComponent, ToolbarComponent, CalendarComponent
+    AppComponent, ToolbarComponent, CalendarComponent, CardComponent
   ],
   imports: [ // Importamos otros modulos
     BrowserModule

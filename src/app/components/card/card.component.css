@@ -1,0 +1,19 @@
+.card{
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+    padding-bottom: 16px;
+}
+
+.card img{
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card h5, .card p{
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
