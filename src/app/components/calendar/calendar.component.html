@@ -1,0 +1,22 @@
+<table *ngIf="data.length > 0 ; else noCumple">
+    <thead>
+        <th></th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miercoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of data">
+            <td>{{u.name}}</td>
+            <td><div *ngIf="u.day == 0" class="indicator"></div></td>
+            <td><div *ngIf="u.day == 1" class="indicator"></div></td>
+            <td><div *ngIf="u.day == 2" class="indicator"></div></td>
+            <td><div *ngIf="u.day == 3" class="indicator"></div></td>
+            <td><div *ngIf="u.day == 4" class="indicator"></div></td>
+        </tr>        
+    </tbody>
+</table>
+
+<ng-template #noCumple>No hay cumpleañeros para esta semana</ng-template>

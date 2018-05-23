@@ -1,0 +1,22 @@
+.indicator{
+    width: 10px;
+    height: 10px;
+    background-color: brown;
+    border-radius: 50%;
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    margin-bottom: 10px;
+}
+
+tr:nth-child(odd){
+    background-color: #eee;
+}
+
+td > div{
+    margin: auto;
+}
