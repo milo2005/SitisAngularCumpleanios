@@ -1,3 +1,27 @@
-<p>
-  add-page works!
-</p>
+<app-toolbar [title]="'Agregar Foto'"></app-toolbar>
+<div class="container">
+
+  <a routerLink="">Principal</a> > Agregar Foto
+
+  <br>
+  <br>
+  <form #formPhoto="ngForm">
+    <div>
+      <label for="name">Nombre</label>
+      <input #name="ngModel" name="name" type="text" required [(ngModel)]="photo.name">
+      <p *ngIf="name.invalid && name.dirty">El nombre es obligatorio</p>
+    </div>
+
+    <div>
+      <label for="img">Imagen</label>
+      <input #img="ngModel" name="img" type="text" required [(ngModel)]="photo.image">
+      <p [hidden] = "img.valid || img.pristine">La imagen es obligatoria</p>
+    </div>
+    
+
+    <button routerLink="">Cancelar</button>
+    <button [disabled]="formPhoto.invalid" (click)="add()">Aceptar</button>
+
+  </form>
+
+</div>

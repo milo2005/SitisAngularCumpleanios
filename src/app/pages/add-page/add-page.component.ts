@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Photo, BirthdayService } from '../../services/birthday.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-page',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPageComponent implements OnInit {
 
-  constructor() { }
+  photo: Photo = new Photo('', new Date(), '');
+
+  constructor(public service: BirthdayService,
+    public router: Router, public route: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  add() {
+    this.service.addPhoto(this.photo);
+    this.router.navigate(['../'], { relativeTo: this.route });
   }
 
 }
