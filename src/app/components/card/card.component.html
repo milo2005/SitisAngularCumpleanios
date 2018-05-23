@@ -1,5 +1,5 @@
-<div class="card">
+<div class="card" (click)="onClick()">
   <img src="{{photo.image}}">
-  <h5>{{photo.date}}</h5>
-  <p>{{photo.name}}}</p>
+  <h5>{{photo.date | fecha :'dd/mm/yyyy'}}</h5>
+  <p>{{photo.name}}</p>
 </div>

@@ -10,10 +10,6 @@ import { BirthdayService, Photo } from './services/birthday.service';
 })
 export class AppComponent {
 
-  data: Photo[] = [];
-
-  constructor(public service: BirthdayService) {
-    this.data = service.loadPhotos();
-  }
+  
 
 }

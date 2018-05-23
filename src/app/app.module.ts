@@ -6,10 +6,13 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { BirthdayService } from './services/birthday.service';
 import { CardComponent } from './components/card/card.component';
+import { FechaPipe } from './pipes/fecha.pipe';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { AddPageComponent } from './pages/add-page/add-page.component';
 
 @NgModule({
   declarations: [ // Componentes, Pipes, Directivas que tienen visibilidad en modulo
-    AppComponent, ToolbarComponent, CalendarComponent, CardComponent
+    AppComponent, ToolbarComponent, CalendarComponent, CardComponent, FechaPipe, MainPageComponent, AddPageComponent
   ],
   imports: [ // Importamos otros modulos
     BrowserModule

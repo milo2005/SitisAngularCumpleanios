@@ -1,0 +1,11 @@
+<app-toolbar [title]="'Cumpleaños'"></app-toolbar>
+
+<div class="container">
+  <app-calendar></app-calendar>
+  <h4>Fotos !!</h4>
+  <div class="row">
+    <app-card class="col" *ngFor="let c of data" 
+        [photo]="c" (cardSelected)="onCardSelected($event)"></app-card>
+  </div>
+
+</div>
